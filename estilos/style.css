@@ -1,0 +1,88 @@
+/*
+HEX
+verdes
+#7EFFBE P
+#DDFFEE C
+#35674E O
+rosados
+#FF7E95 P
+#FFE7EB C
+#7E3B47 O*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+
+header {
+  background-color: #7effbe;
+  display: flex;
+  height: 450px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+h1 {
+  color: #7e3b47;
+}
+.subtit {
+  color: #ff7e95;
+}
+.gatito {
+  width: 15%;
+  justify-content: center;
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
+}
+#botonesIngreso {
+  display: flex;
+}
+.verde {
+    background-color: #35674e;
+    color: #ff7e95;
+
+  border: none;
+  padding: 20px;
+  margin: 20px;
+  height: 30px;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.rosa {
+    background-color: #ff7e95;
+    color: #35674e;
+  border: none;
+  padding: 20px;
+  margin: 20px;
+  height: 30px;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  background-color: #ffe7eb;
+  display: flex;
+  width: 100%;
+  height: 300px;
+}
+.enconstruccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
