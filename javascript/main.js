@@ -96,14 +96,13 @@ for (product of productList) {
   </figure>
 </div>
 </div> */
+const mainContainer = document.getElementById('mainContainer');
+console.log(mainContainer);
 
-
-function renderProducts(productList) {
   for (product of productList) {
   const productCard = document.createElement('div');
   productCard.classList.add('product-card');
 
-  // product= {name, price, image} -> product.image
   const productImg = document.createElement('img');
   productImg.setAttribute('src', product.image);
 
@@ -119,6 +118,8 @@ function renderProducts(productList) {
 
   productInfoDiv.appendChild(productPrice);
   productInfoDiv.appendChild(productName);
+  console.log(productName);
+
 
   const productInfoFigure = document.createElement('figure');
   const productImgCart = document.createElement('img');
@@ -134,10 +135,9 @@ function renderProducts(productList) {
 
   const cardsContainer = document.createElement("cardsContainer");
   cardsContainer.classList.add('.cards-container');
-
   cardsContainer.appendChild(productCard);
+ 
+  mainContainer.append(cardsContainer);
 }
 
-}
-renderProducts(productList);
-console.log(renderProducts)
+console.log(productList);
