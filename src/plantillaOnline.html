@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crea Online</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../estilos/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="../javascript/main.js"></script>
+  </head>
+
+  <body>
+    <header id="header-gral">
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <img class="gatito-menu" src="../assets/menuGato.jpg" width="8%" />
+        </label>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a class="active">Crea Online</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+        </ul>
+      </nav>
+
+      <section class="contenido-header-plantilla">
+        <img class="gatito-header" src="../assets/tito.png" alt="gatito" />
+        <h2>Personaliza tu hoja de Diario</h2>
+      </section>
+    </header>
+
+    <main>
+      <section class="main-row">
+        <div class="imprimible">
+          <textarea
+            rows="15"
+            cols="100"
+            placeholder="Escribe aui tu texto "
+          ></textarea>
+        </div>
+
+        <section class="plantilla-texto">
+          <div class="flex-box">
+            <div class="col">
+              <button type="button" onclick="f1()" title="Bold Text">
+                Negrita
+              </button>
+              <button type="button" onclick="f2()" title="Italic Text">
+                Cursiva
+              </button>
+              <button type="button" onclick="f6()" title="Uppercase Text">
+                Mayúsculas
+              </button>
+              <button type="button" onclick="f7()" title="Lowercase Text">
+                Minúsculas
+              </button>
+              <button type="button" onclick="f9()" title="Tooltip on top">
+                Borrar Text
+              </button>
+              <button type="button" onclick="f3()" title="Left Align">
+                <i class="fas fa-align-left"></i>
+              </button>
+              <button
+                type="button"
+                onclick="f4()"
+                class=""
+                title="Center Align"
+              >
+                <i class="fas fa-align-center"></i>
+              </button>
+              <button type="button" onclick="f5()" class="" title="Right Align">
+                <i class="fas fa-align-right"></i>
+              </button>
+              <button
+                type="button"
+                class="printbutton"
+                onclick="window.print();return false;"
+              >
+                Imprimir/Descargar
+              </button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

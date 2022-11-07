@@ -2,38 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antología Diario</title>
-    <link rel="stylesheet" href="./estilos/style.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antología Diario</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./estilos/style.css" />
+  <script src="../javascript/main.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Bienvenido a tu Diario Intimo Digital</h1>
-        <div class="subtit">Práctico! llevalo siempre contigo, en tu notebook, tablet o smartphone. </div>
-        <img class="gatito" src="./assets/tito.png" alt="gatito">
-        <div id="botonesIngreso">
-            <button class="verde">Ingresa a tu cuenta</button>
-            <button class="rosa">Crea tu cuenta</button>
+  <header id="header-gral">
+    <!-- <section class="nav-header">
+        <div class="navbar-right">
+            <img src="/assets/carrito-de-compras.png" alt="shopping cart">
         </div>
-    </header>
+    </section> -->
+    <section class="contenido-header">
+      <h1>ANTOLOGÍA</h1>
+      <h2>Bienvenido a tu Diario Intimo</h2>
+      <img class="gatito-header" src="./assets/tito.png" alt="gatito" />
+      <div class="subtit">Llevalo siempre contigo</div>
+      <div id="botonesIngreso">
+        <a class="verde" href="./src/plantillaOnline.html">Crea tu Hoja</a>
+        <a class="rosa" href="./src/tienda.html">Nuestra tienda</a>
+      </div>
+    </section>
+  </header>
 
-    <main>
-        <section>
-            <div class="enconstruccion">
-                <img class="gatito" src="./assets/patita.jpg" alt="patita">
-                <p class="rosa">PAGINA EN CONSTRUCCIÓN... prueba JavaScript debajo</p>
-                <img class="gatito" src="./assets/patita.jpg" alt="patita">
-            </div>
-            <div class="enconstruccion">
-                <a href="./src/ejemuno.html" target="_blank" class="verde">Prueba Condicionales y Funciones</a>
-                <a href="./src/ejemdos.html" target="_blank" class="rosa">Prueba Ciclos - for/while/do</a>
-            </div>
-
-        </section>
-    </main>
+  <main>
+    <section class="main-top">
+      <div class="enconstruccion">
+        <img class="gatito-header" src="./assets/patita.jpg" alt="patita" />
+        <p class="rosa">PAGINA EN CONSTRUCCIÓN...</p>
+        <img class="gatito-header" src="./assets/patita.jpg" alt="patita" />
+      </div>
+      <div class="enconstruccion">
+        <a href="./src/ejemuno.html" target="_blank" class="verde">Prueba Condicionales y Funciones</a>
+        <a href="./src/ejemdos.html" target="_blank" class="rosa">Prueba Ciclos - for/while/do</a>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
