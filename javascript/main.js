@@ -38,44 +38,52 @@ function f9() {
 
 const productList = [];
 productList.push({
+  id: 1,
   name: "Diario Unicornio",
   price: 250,
   image: "../assets/diario1.jpeg",
 });
 productList.push({
+  id: 2,
   name: "Diario Musica",
   price: 250,
-  image: "../assets/diario5.jpeg",
+  image: "../assets/diario2.jpg",
 });
 productList.push({
+  id: 3,
   name: "Diario Bailarina",
   price: 350,
-  image: "../assets/diario5.jpeg",
+  image: "../assets/diario3.jpg",
 });
 productList.push({
+  id: 4,
   name: "Diario Llama",
   price: 350,
   image: "../assets/diario4.jpeg",
 });
 productList.push({
+  id: 5,
   name: "Diario Llama peluche",
   price: 430,
   image: "../assets/diario5.jpeg",
 });
 productList.push({
+  id: 6,
   name: "Diario Harry Potter",
   price: 375,
-  image: "../assets/diario5.jpeg",
+  image: "../assets/diario6.jpg",
 });
 productList.push({
+  id: 7,
   name: "Diario Death Note",
   price: 350,
-  image: "../assets/diario5.jpeg",
+  image: "../assets/diario7.jpeg",
 });
 productList.push({
+  id: 8,
   name: "Diario Luffy",
   price: 350,
-  image: "../assets/diario7.jpeg",
+  image: "../assets/diario8.jpeg",
 });
 
 for (product of productList) {
@@ -96,8 +104,7 @@ for (product of productList) {
   </figure>
 </div>
 </div> */
-const mainContainer = document.getElementById('mainContainer');
-console.log(mainContainer);
+const cardsContainer = document.querySelector('.cards-container');
 
   for (product of productList) {
   const productCard = document.createElement('div');
@@ -120,7 +127,6 @@ console.log(mainContainer);
   productInfoDiv.appendChild(productName);
   console.log(productName);
 
-
   const productInfoFigure = document.createElement('figure');
   const productImgCart = document.createElement('img');
   productImgCart.setAttribute('src', '../assets/carrito-de-compras.png');
@@ -133,11 +139,10 @@ console.log(mainContainer);
   productCard.appendChild(productImg);
   productCard.appendChild(productInfo);
 
-  const cardsContainer = document.createElement("cardsContainer");
-  cardsContainer.classList.add('.cards-container');
   cardsContainer.appendChild(productCard);
- 
-  mainContainer.append(cardsContainer);
-}
 
-console.log(productList);
+}
+renderProducts(productList);
+
+
+
