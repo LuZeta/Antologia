@@ -206,14 +206,20 @@ textarea {
 /*cards productos */
 
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 240px);
-  gap: 26px;
-  place-content: center;
-  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 10px;
+  transition: 0.5s;
 }
-.product-card {
+.product-card:hover {
+  border-radius: 20px;
   width: 240px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  transform: scale(1.03);
+  box-shadow: 0 0 35px 0 #7EFFBE;
+ 
 }
 .product-card img {
   width: 240px;
@@ -225,7 +231,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 12px;
+  margin: 15px;
 }
 .product-card .infoProducto figure {
   margin: 0;
