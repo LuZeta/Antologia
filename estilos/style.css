@@ -1,9 +1,9 @@
 /*
 HEX
 verdes
-#7EFFBE P
-#DDFFEE C
-#35674E O
+#7EFFBE Principal
+#DDFFEE Claro
+#35674E Oscuro
 rosados
 #FF7E95 P
 #FFE7EB C
@@ -18,7 +18,6 @@ rosados
 
 header {
   background-color: #7effbe;
-
 }
 
 .contenido-header {
@@ -30,17 +29,7 @@ header {
   flex-direction: column;
   text-align: center;
 }
-/* es parte del carrito, queda habilitado en conjunto con los productos 
-.navbar-right {
-  display: flex;
-  height: 45px;
-  justify-content: flex-end;
-  padding-top: 6px;
-  padding-right: 20px;
-}
-.navbar-right img {
-  filter: brightness(1.1);
-}*/
+/*Nav de las paginas Crea Online y Tienda*/
 
 nav {
   background: #35674e;
@@ -49,14 +38,10 @@ nav {
   position: fixed;
   flex-direction: column;
 }
-/*.nav-left{
-  display: flex;
-  flex-direction: row;
-}*/
 .gatito-menu {
-width: 45px;
-filter: drop-shadow (5px 5px 10px rgb(255, 0, 221));
-mix-blend-mode: multiply;
+  width: 45px;
+  filter: drop-shadow (5px 5px 10px rgb(255, 0, 221));
+  mix-blend-mode: multiply;
 }
 
 nav ul {
@@ -115,6 +100,8 @@ h2 {
 #botonesIngreso {
   display: flex;
 }
+/*termina el nav*/
+
 .verde {
   background-color: #35674e;
   color: #ff7e95;
@@ -147,7 +134,11 @@ h2 {
   display: flex;
   align-items: center;
 }
-
+.carro {
+  margin-top: 10px;
+  border-bottom-style: groove;
+  border-right: groove;
+}
 main {
   background-color: #fffbfb;
   display: flex;
@@ -163,7 +154,8 @@ main {
   justify-content: center;
   align-items: center;
 }
-/*plantillas texto*/
+
+/*plantillas texto CREA ONLINE*/
 .contenido-header-plantilla {
   display: flex;
   height: 250px;
@@ -203,8 +195,8 @@ textarea {
   display: flex;
   justify-content: center;
 }
-/*cards productos */
 
+/*cards productos */
 .cards-container {
   display: flex;
   justify-content: space-evenly;
@@ -218,8 +210,7 @@ textarea {
   margin-top: 15px;
   margin-bottom: 15px;
   transform: scale(1.03);
-  box-shadow: 0 0 35px 0 #7EFFBE;
- 
+  box-shadow: 0 0 35px 0 #7effbe;
 }
 .product-card img {
   width: 240px;
@@ -246,12 +237,72 @@ textarea {
   margin-top: 0;
   margin-bottom: 4px;
 }
-.product-card .infoProducto div p:nth-child(2) {
+.product-card .infoProducto div p:nth-child() {
   font-size: var(--sm);
   margin-top: 0;
   margin-bottom: 0;
   color: var(--very-light-pink);
 }
+/*Modal Container - Lista del carro de compras*/
+.modal-container {
+  width: 80%;
+  margin: 0 10%;
+  max-height: 88vh;
+  background-color: #ffe7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none;
+}
+
+.modal-container::-webkit-scrollbar {
+  display: none;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ff7e95;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.modal-header-title {
+  justify-self: center;
+}
+
+.modal-header-button {
+  cursor: pointer;
+  justify-self: end;
+}
+
+.modal-container > .modal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 10px;
+}
+
+.modal-container > div > img {
+  height: 120px;
+  width: 120px;
+}
+
+.total-content {
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/*se agregaron unas lineas de css con media querys para que se adapte mejor al responsive :)*/
+
 @media (max-width: 750px) {
   header {
     height: 50%;
@@ -299,7 +350,27 @@ textarea {
     width: 140px;
     height: 140px;
   }
+  .modal-container > .modal-content {
+    justify-content: space-between;
+    width: 100%;
+    margin: 2px;
+    padding: 8px;
+  }
+  .modal-container > div > img {
+    height: 80px;
+    width: 80px;
+  }
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 640px) {
+  /*Crea Online*/
+  .imprimible {
+    height: 300px;
+    width: 300px;
+  }
+  .main-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

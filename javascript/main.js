@@ -1,137 +1,44 @@
+const cardsContainer = document.querySelector(".cards-container");
+const modalCarro = document.querySelector(".carro");
+const modalContainer = document.getElementById("modal-container");
 
-/*crear texto en plantilla de diario*/
-function f1() {
-  document.querySelector("textarea").style.fontWeight = "bold";
-}
-function f2() {
-  document.querySelector("textarea").style.fontStyle = "italic";
-}
-function f3() {
-  document.querySelector("textarea").style.textAlign = "left";
-}
-function f4() {
-  document.querySelector("textarea").style.textAlign = "center";
-}
-function f5() {
-  document.querySelector("textarea").style.textAlign = "right";
-}
-
-function f6() {
-  document.querySelector("textarea").style.textTransform = "uppercase";
-}
-function f7() {
-  document.querySelector("textarea").style.textTransform = "lowercase";
-}
-function f8() {
-  document.querySelector("textarea").style.textTransform = "capitalize";
-}
-
-function f9() {
-  document.querySelector("textarea").style.fontWeight = "normal";
-  document.querySelector("textarea").style.textAlign = "left";
-  document.querySelector("textarea").style.fontStyle = "normal";
-  document.querySelector("textarea").style.textTransform = "capitalize";
-  document.querySelector("textarea").value = " ";
-}
-
-/*tienda online*/
-
-const productList = [];
-productList.push({
-  id: 1,
-  name: "Diario Unicornio",
-  price: 250,
-  image: "../assets/diario1.jpeg",
-});
-productList.push({
-  id: 2,
-  name: "Diario Musica",
-  price: 250,
-  image: "../assets/diario2.jpg",
-});
-productList.push({
-  id: 3,
-  name: "Diario Bailarina",
-  price: 350,
-  image: "../assets/diario3.jpg",
-});
-productList.push({
-  id: 4,
-  name: "Diario Llama",
-  price: 350,
-  image: "../assets/diario4.jpeg",
-});
-productList.push({
-  id: 5,
-  name: "Diario Llama peluche",
-  price: 430,
-  image: "../assets/diario5.jpeg",
-});
-productList.push({
-  id: 6,
-  name: "Diario Harry Potter",
-  price: 375,
-  image: "../assets/diario6.jpg",
-});
-productList.push({
-  id: 7,
-  name: "Diario Death Note",
-  price: 350,
-  image: "../assets/diario7.jpeg",
-});
-productList.push({
-  id: 8,
-  name: "Diario Luffy",
-  price: 350,
-  image: "../assets/diario8.jpeg",
-});
+let carrito = [];
 
 for (product of productList) {
-  console.log(product.name);
-}
+  const productCard = document.createElement("div");
+  productCard.classList.add("product-card");
 
-//product = {name, price, image}=> prouct.
-/*REFERENCIA CARD PRODUCT HTML
-<div class="product-card">
-<img src="../assets/diario1.jpeg" alt="">
-<div class="infoProducto">
-  <div>
-    <p>$250</p>
-    <p>Diario Unicornio</p>
-  </div>
-  <figure>
-    <img src="../assets/carrito-de-compras.png" alt="carrito">
-  </figure>
-</div>
-</div> */
-const cardsContainer = document.querySelector('.cards-container');
+  const productImg = document.createElement("img");
+  productImg.setAttribute("src", product.image);
 
-  for (product of productList) {
-  const productCard = document.createElement('div');
-  productCard.classList.add('product-card');
+  const productInfo = document.createElement("div");
+  productInfo.classList.add("infoProducto");
 
-  const productImg = document.createElement('img');
-  productImg.setAttribute('src', product.image);
+  const productInfoDiv = document.createElement("div");
 
-  const productInfo = document.createElement('div');
-  productInfo.classList.add('infoProducto');
-
-  const productInfoDiv = document.createElement('div');
-
-  const productPrice = document.createElement('p');
-  productPrice.innerText = '$' + product.price;
-  const productName = document.createElement('p');
+  const productPrice = document.createElement("p");
+  productPrice.innerText = "$" + product.price;
+  const productName = document.createElement("p");
   productName.innerText = product.name;
 
   productInfoDiv.appendChild(productPrice);
   productInfoDiv.appendChild(productName);
-  console.log(productName);
 
-  const productInfoFigure = document.createElement('figure');
-  const productImgCart = document.createElement('img');
-  productImgCart.setAttribute('src', '../assets/carrito-de-compras.png');
+  const productInfoFigure = document.createElement("figure");
 
-  productInfoFigure.appendChild(productImgCart);
+  const btn = document.createElement("button");
+  btn.innerHTML = "<img src='../assets/carrito-de-compras.png'>";
+  productInfoFigure.appendChild(btn);
+
+  btn.addEventListener("click", () => {
+    carrito.push({
+      id: product.id,
+      image: product.image,
+      name: product.name,
+      price: product.price,
+    });
+    console.log(carrito);
+  });
 
   productInfo.appendChild(productInfoDiv);
   productInfo.appendChild(productInfoFigure);
@@ -140,9 +47,5 @@ const cardsContainer = document.querySelector('.cards-container');
   productCard.appendChild(productInfo);
 
   cardsContainer.appendChild(productCard);
-
+  console.log(product);
 }
-renderProducts(productList);
-
-
-
