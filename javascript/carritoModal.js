@@ -18,12 +18,17 @@ const verCarrito = () => {
     carrito.forEach((product) => {
       let carritoContent = document.createElement("div");
       carritoContent.className = "modal-content";
-      carritoContent.innerHTML = `
+      carritoContent.innerHTML += `
       <img src = "${product.image}">
       <h3>${product.name}</h3>
       <p>$ ${product.price} </p>
       `;
       modalContainer.appendChild(carritoContent);
+
+      let eliminar = document.createElement("span");
+      eliminar.innerText = "❌";
+      eliminar.className = "delete-product";
+      carritoContent.appendChild(eliminar);
     });
   
     const total = carrito.reduce((acc, el) => acc + el.price, 0);
@@ -34,3 +39,19 @@ const verCarrito = () => {
   };
   
   modalCarro.addEventListener("click", verCarrito)
+
+/*eliminar producto del carrito*/
+const eliminarProducto =() => {
+  foundID = carrito.find((element) => element.id)
+
+  carrito = carrito.filter((carritoId) => {
+return carritoId !== foundID;
+  })
+  
+verCarrito();
+
+};
+
+
+
+

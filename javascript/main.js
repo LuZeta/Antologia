@@ -38,6 +38,7 @@ for (product of productList) {
       price: product.price,
     });
     console.log(carrito);
+    
   });
 
   productInfo.appendChild(productInfoDiv);
