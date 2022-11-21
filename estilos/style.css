@@ -138,6 +138,20 @@ h2 {
   margin-top: 10px;
   border-bottom-style: groove;
   border-right: groove;
+  cursor: pointer;
+}
+/*carrito cantidad boton arriba rojo*/
+.cantidadCarritoDiv {
+  display: flex;
+}
+.cantidad-carrito {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 4px;
+  position: absolute;
+  display: none;
 }
 main {
   background-color: #fffbfb;
@@ -163,7 +177,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
+  text-align: inherit;
   padding-top: 50px;
 }
 .plantilla-texto {
@@ -217,6 +231,7 @@ textarea {
   height: 240px;
   border-radius: 20px;
   object-fit: cover;
+  cursor: pointer;
 }
 .product-card .infoProducto {
   display: flex;
@@ -301,10 +316,26 @@ textarea {
   padding-top: 20px;
 }
 
-/*cruz delete-product del Modal carro*/
-.delete-product{
+.pagar {
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px;
   cursor: pointer;
 }
+
+/*cruz delete-product del Modal carro*/
+.delete-product {
+  cursor: pointer;
+}
+
+.sumar {
+  cursor: pointer;
+}
+.restar {
+  cursor: pointer;
+}
+
 @media (max-width: 750px) {
   header {
     height: 50%;
@@ -352,6 +383,9 @@ textarea {
     width: 140px;
     height: 140px;
   }
+  .modal-container {
+    width: inherit;
+  }
   .modal-container > .modal-content {
     justify-content: space-between;
     width: 100%;
@@ -359,8 +393,8 @@ textarea {
     padding: 8px;
   }
   .modal-container > div > img {
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
   }
 }
 

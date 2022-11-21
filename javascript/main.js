@@ -1,8 +1,9 @@
 const cardsContainer = document.querySelector(".cards-container");
 const modalCarro = document.querySelector(".carro");
 const modalContainer = document.getElementById("modal-container");
+const cantidadCarrito = document.getElementById("cantidadCarrito");
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let productId = 1;
 
 productList.forEach((product) => {
@@ -32,16 +33,15 @@ productList.forEach((product) => {
   productInfoFigure.appendChild(btn);
 
   btn.addEventListener("click", () => {
-
     /*agrego cantidad a los productos del carrito*/
     const repeat = carrito.some(
       (repeatProduct) => repeatProduct.id === product.id
     );
+    console.log(repeat);
 
-    /*si some es true (tengo dos porductos con el mismo id, entonces agrego ++ uno
+    /*si some es true (tengo porductos con el mismo id, entonces agrego ++
       a la cantidad)*/
 
-    console.log(repeat);
     if (repeat) {
       carrito.map((productos) => {
         if (productos.id === product.id) {
@@ -50,7 +50,7 @@ productList.forEach((product) => {
       });
     } else {
       carrito.push({
-        id: productId,
+        id: product.id,
         image: product.image,
         name: product.name,
         price: product.price,
@@ -59,8 +59,10 @@ productList.forEach((product) => {
     }
 
     productId++;
-
     console.log(productId);
+
+    carritoCounter();
+    saveLocal();
   });
 
   productInfo.appendChild(productInfoDiv);
@@ -72,3 +74,12 @@ productList.forEach((product) => {
   cardsContainer.appendChild(productCard);
   console.log(product);
 });
+
+/*set item*/
+const saveLocal = () => {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+};
+
+/*get item
+JSON.parse(localStorage.getItem("carrito"));
+lo agrego a mi array vacío del comienzo*/
