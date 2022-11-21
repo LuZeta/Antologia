@@ -3,8 +3,9 @@ const modalCarro = document.querySelector(".carro");
 const modalContainer = document.getElementById("modal-container");
 
 let carrito = [];
+let productId = 1;
 
-for (product of productList) {
+productList.forEach((product) => {
   const productCard = document.createElement("div");
   productCard.classList.add("product-card");
 
@@ -31,14 +32,35 @@ for (product of productList) {
   productInfoFigure.appendChild(btn);
 
   btn.addEventListener("click", () => {
-    carrito.push({
-      id: product.id,
-      image: product.image,
-      name: product.name,
-      price: product.price,
-    });
-    console.log(carrito);
-    
+
+    /*agrego cantidad a los productos del carrito*/
+    const repeat = carrito.some(
+      (repeatProduct) => repeatProduct.id === product.id
+    );
+
+    /*si some es true (tengo dos porductos con el mismo id, entonces agrego ++ uno
+      a la cantidad)*/
+
+    console.log(repeat);
+    if (repeat) {
+      carrito.map((productos) => {
+        if (productos.id === product.id) {
+          productos.amount++;
+        }
+      });
+    } else {
+      carrito.push({
+        id: productId,
+        image: product.image,
+        name: product.name,
+        price: product.price,
+        amount: product.amount,
+      });
+    }
+
+    productId++;
+
+    console.log(productId);
   });
 
   productInfo.appendChild(productInfoDiv);
@@ -49,4 +71,4 @@ for (product of productList) {
 
   cardsContainer.appendChild(productCard);
   console.log(product);
-}
+});

@@ -18,36 +18,46 @@ const verCarrito = () => {
     carrito.forEach((product) => {
       let carritoContent = document.createElement("div");
       carritoContent.className = "modal-content";
+      carritoContent.id = product.id;
       carritoContent.innerHTML += `
       <img src = "${product.image}">
       <h3>${product.name}</h3>
       <p>$ ${product.price} </p>
+      <p>Cantidad ${product.amount}</p>
+      <p>Total: ${product.amount * product.price}</p>
       `;
       modalContainer.appendChild(carritoContent);
+      
 
       let eliminar = document.createElement("span");
+      eliminar.id = product.id;
       eliminar.innerText = "❌";
       eliminar.className = "delete-product";
       carritoContent.appendChild(eliminar);
+
+      eliminar.addEventListener("click", eliminarProducto);
+    
     });
   
-    const total = carrito.reduce((acc, el) => acc + el.price, 0);
+    const total = carrito.reduce((acc, el) => acc + el.price * el.amount, 0);
     const totalCompra = document.createElement("div");
     totalCompra.className = "total-content";
-    totalCompra.innerHTML = `Total a pagar: $${total} `;
+    totalCompra.innerHTML = `Total a pagar: $${total}`;
     modalContainer.appendChild(totalCompra);
   };
   
   modalCarro.addEventListener("click", verCarrito)
 
 /*eliminar producto del carrito*/
-const eliminarProducto =() => {
-  foundID = carrito.find((element) => element.id)
+const eliminarProducto = (event) => {
+  let currentId = event.currentTarget.id;
+  const foundId = carrito.find((element) => element.id == currentId);
 
   carrito = carrito.filter((carritoId) => {
-return carritoId !== foundID;
-  })
-  
+    return carritoId !== foundId;
+    
+  });
+
 verCarrito();
 
 };
