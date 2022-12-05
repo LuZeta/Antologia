@@ -136,12 +136,20 @@ h2 {
   text-decoration: none;
   align-items: center;
 }
+.cartContainer{
+  top: 1px;
+    right: 1px;
+    position: fixed;
+    text-align-last: end;
+
+}
 .carro {
   margin-top: 10px;
   border-bottom-style: groove;
   border-right: groove;
   cursor: pointer;
 }
+
 /*carrito cantidad boton arriba rojo*/
 .cantidadCarritoDiv {
   display: flex;
@@ -154,6 +162,7 @@ h2 {
   padding: 4px;
   position: absolute;
   display: none;
+  right: 26px;
 }
 main {
   background-color: #fffbfb;
@@ -204,6 +213,10 @@ button {
 button:hover {
   background-color: #fec8d8 !important;
 }
+.imprimible {
+  display: flex;
+  justify-content: center;
+}
 textarea {
   padding: 3%;
   border-color: #ddffee;
@@ -211,10 +224,7 @@ textarea {
   background-color: #fec8d8;
   margin-top: 50px;
 }
-.imprimible {
-  display: flex;
-  justify-content: center;
-}
+
 #citaFamoso_div p {
   color: #7e3b47;
   display: flex;
@@ -278,8 +288,9 @@ textarea {
 /*Modal Container - Lista del carro de compras*/
 
 .modal-container {
-  width: 80%;
-  margin: 0 10%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
   max-height: 88vh;
   background-color: #ffe7eb;
   display: flex;
@@ -528,13 +539,23 @@ footer {
   .product-card {
     width: 140px;
   }
+
+  .product-card:hover {
+    border-radius: 20px;
+    width: 140px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transform: scale(1.03);
+    transition-duration: 0.4s;
+    box-shadow: 0 0 35px 0 #7effbe;
+  }
   .product-card img {
     width: 140px;
     height: 140px;
+    
   }
   .modal-container {
     justify-content: center;
-    width: inherit;
   }
   .modal-container > .modal-content {
     justify-content: space-between;
