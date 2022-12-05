@@ -1,102 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crea Online</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../estilos/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
 
-    <script src="../javascript/editorDiario.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crea Online</title>
 
-  <body>
-    <header id="header-gral">
-      <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <img class="gatito-menu" src="../assets/menupatita.png" width="8%" />
-        </label>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a class="active">Crea Online</a></li>
-          <li><a href="tienda.html">Tienda</a></li>
-        </ul>
-      </nav>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 
-      <section class="contenido-header-plantilla">
-        <img class="gatito-header" src="../assets/tito.png" alt="gatito" />
-        <h2>Personaliza tu hoja de Diario</h2>
-      </section>
-    </header>
+  <link rel="stylesheet" href="../estilos/style.css" />
 
-    <main>
-      <section class="main-row">
-        <div class="imprimible">
-          <textarea
-            rows="15"
-            cols="100"
-            placeholder="Escribe aui tu texto "
-          ></textarea>
-        </div>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-        <section class="plantilla-texto">
-          <div class="flex-box">
-            <div class="col">
-              <button type="button" onclick="f1()" title="Bold Text">
-                Negrita
-              </button>
-              <button type="button" onclick="f2()" title="Italic Text">
-                Cursiva
-              </button>
-              <button type="button" onclick="f6()" title="Uppercase Text">
-                Mayúsculas
-              </button>
-              <button type="button" onclick="f7()" title="Lowercase Text">
-                Minúsculas
-              </button>
-              <button type="button" onclick="f9()" title="Tooltip on top">
-                Borrar Text
-              </button>
-              <button type="button" onclick="f3()" title="Left Align">
-                <i class="fas fa-align-left"></i>
-              </button>
-              <button
-                type="button"
-                onclick="f4()"
-                class=""
-                title="Center Align"
-              >
-                <i class="fas fa-align-center"></i>
-              </button>
-              <button type="button" onclick="f5()" class="" title="Right Align">
-                <i class="fas fa-align-right"></i>
-              </button>
-              <button
-                type="button"
-                class="printbutton"
-                onclick="window.print();return false;"
-              >
-                Imprimir/Descargar
-              </button>
-            </div>
+
+</head>
+
+<body>
+  <header id="header-gral">
+    <nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <img class="gatito-menu" src="../assets/menupatita.png" width="8%" />
+      </label>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a class="active">Crea Online</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="giphy.html">GIFs</a></li>
+
+      </ul>
+    </nav>
+
+    <section class="contenido-header-plantilla">
+      <img class="gatito-header" src="../assets/tito.png" alt="gatito" />
+      <div id="citaFamoso_div"></div>
+    </section>
+  </header>
+
+  <main>
+    <section class="main-row">
+      <div class="imprimible">
+        <textarea rows="15" cols="100" placeholder="Escribe aqui tu texto "></textarea>
+      </div>
+
+      <section class="plantilla-texto">
+        <div class="flex-box">
+          <div class="col">
+            <button type="button" onclick="f1()" title="Bold Text">
+              Negrita
+            </button>
+            <button type="button" onclick="f2()" title="Italic Text">
+              Cursiva
+            </button>
+            <button type="button" onclick="f6()" title="Uppercase Text">
+              Mayúsculas
+            </button>
+            <button type="button" onclick="f7()" title="Lowercase Text">
+              Minúsculas
+            </button>
+            <button type="button" onclick="f9()" title="Tooltip on top">
+              Borrar Text
+            </button>
+            <button type="button" onclick="f3()" title="Left Align">
+              <i class="fas fa-align-left"></i>
+            </button>
+            <button type="button" onclick="f4()" class="" title="Center Align">
+              <i class="fas fa-align-center"></i>
+            </button>
+            <button type="button" onclick="f5()" class="" title="Right Align">
+              <i class="fas fa-align-right"></i>
+            </button>
+            <button type="button" class="printbutton" onclick="window.print();">
+              Imprimir/Descargar
+            </button>
           </div>
-        </section>
+        </div>
       </section>
-    </main>
-  </body>
+    </section>
+  </main>
+  <script src="../javascript/editorDiario.js"></script>
+
+</body>
+
 </html>

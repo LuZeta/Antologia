@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIFs</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../estilos/style.css" />
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <header id="header-gral">
+        <nav>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                <img class="gatito-menu" src="../assets/menupatita.png" width="8%" />
+            </label>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="plantillaOnline.html">Crea Online</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a class="active" href="giphy.html">GIFs</a></li>
+            </ul>
+        </nav>
+        <section class="contenido-header-plantilla">
+            <img class="gatito-header" src="../assets/tito.png" alt="gatito" />
+            <div id="citaFamoso_div"></div>
+        </section>
+    </header>
+    <main>
+        <section class="enconstruccion-top">
+            <div class="enconstruccion">
+                <img class="gatito-header" src="../assets/patita.jpg" alt="patita" />
+                <h2 class="seleccionGif">Selecciona tu Gif</h2>
+                <input type="text" class="input_buscar" id="busqueda" placeholder="Elige...">
+                <button id="btn" class="botton_giphy"> Buscar</button>
+                <img class="gatito-header" src="../assets/patita.jpg" alt="patita" />
+            </div>
+        </section>
+
+        <div class="giphyContainer">
+            <div id="listaGifs"></div>
+        </div>
+    </main>
+
+    <script src="../javascript/giphy.js"></script>
+
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 /*
-HEX
+PALETA DE COLOES HEX
 verdes
 #7EFFBE Principal
 #DDFFEE Claro
@@ -115,6 +115,7 @@ h2 {
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
   display: flex;
   align-items: center;
 }
@@ -132,6 +133,7 @@ h2 {
   font-weight: bold;
   cursor: pointer;
   display: flex;
+  text-decoration: none;
   align-items: center;
 }
 .carro {
@@ -145,7 +147,7 @@ h2 {
   display: flex;
 }
 .cantidad-carrito {
-  background-color: red;
+  background-color: #ff7e95;
   color: white;
   border-radius: 50%;
   font-size: 12px;
@@ -158,12 +160,15 @@ main {
   display: flex;
   justify-content: center;
   width: 100%;
+  padding-top: 30px;
+  flex-direction: column;
 }
-.main-row {
+.enconstruccion-top {
   display: flex;
   flex-direction: column;
 }
 .enconstruccion {
+  padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,10 +209,21 @@ textarea {
   border-color: #ddffee;
   border-width: thick;
   background-color: #fec8d8;
+  margin-top: 50px;
 }
 .imprimible {
   display: flex;
   justify-content: center;
+}
+#citaFamoso_div p {
+  color: #7e3b47;
+  display: flex;
+  border: solid;
+  border-color: #ffe7eb;
+  padding: 10px;
+  margin-left: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 /*cards productos */
@@ -224,6 +240,7 @@ textarea {
   margin-top: 15px;
   margin-bottom: 15px;
   transform: scale(1.03);
+  transition-duration: 0.4s;
   box-shadow: 0 0 35px 0 #7effbe;
 }
 .product-card img {
@@ -335,6 +352,43 @@ textarea {
 .restar {
   cursor: pointer;
 }
+/*GIPHY*/
+
+.input_buscar {
+  margin-left: 20px;
+  background-color: #ffe7eb;
+  padding: 5px;
+  text-align: center;
+  border-color: #7effbe;
+}
+
+.botton_giphy {
+  background-color: #ff7e95;
+  color: #35674e;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  height: 20px;
+  font-size: 10px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.giphyCards {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 20px;
+  width: 180px;
+  height: 150px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 35px 0 #7effbe;
+}
 
 @media (max-width: 750px) {
   header {
@@ -404,9 +458,19 @@ textarea {
     height: 300px;
     width: 300px;
   }
-  .main-row {
+  .enconstruccion-top {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .enconstruccion-top {
+    width: 50%;
+    justify-content: center;
+  }
+  .seleccionGif {
+    display: none;
   }
 }

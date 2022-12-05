@@ -14,14 +14,13 @@ fetch("https://quotes15.p.rapidapi.com/quotes/random/", options)
   .then((response) => response.json())
   .then((data) => {
     quotes = data;
-console.log(quotes);
-    quotes.forEach((quotes) => {
-      const div = document.createElement("div");
-      div.innerHTML = `
-       <p>${quotes.content}</p>`;
+    console.log(quotes);
 
-      divCitas.append(div);
-      console.log(div);
-    });
+    const div = document.createElement("div");
+    div.innerHTML = `
+       <h2>${quotes.content}</h2>`;
+
+    divCitas.append(div);
+    console.log(div);
   })
   .catch((err) => console.error(err));
