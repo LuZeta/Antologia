@@ -11,6 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./estilos/style.css" />
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('Dfmx4voa81fO7Qofd')
+  </script>
+  
 </head>
 
 <body>
@@ -42,11 +49,49 @@
         <a class="rosa" href="./src/giphy.html">Elige tu GIF</a>
         <img class="gatito-header" src="./assets/patita.jpg" alt="patita" />
       </div>
+    </section>
+    <div class="formTitulo">
+      <div class="titComunicate">
+        <p>COMUNÍCATE CON NOSOTROS</p>
+      </div>
+      <div>
+        <p>Nos encantan tus sugerencias ☺☺☺</p>
+      </div>
+    </div>
 
+    <section class="enconstruccion">
+      <div id="formulario">
+        <form id="form">
+          <div class="form">
+            <div class="items">
+              <input class="inputItem" type="text" name="from_name" id="from_name">
+              <label class="labelItem" for="from_name">NOMBRE</label>
+            </div>
+            <div class="items">
+              <input class="inputItemMess" type="text" name="message" id="message">
+              <label class="labelItem" for="message">MENSAJE</label>
+            </div>
+            <div class="items">
+              <input class="inputItem" type="text" name="email_id" id="email_id">
+              <label class="labelItem" for="email_id">EMAIL</label>
+            </div>
+            <input type="submit" id="button" value="ENVIAR">
+          </div>
+        </form>
+      </div>
     </section>
   </main>
-  <script src="../javascript/main.js"></script>
+
+  <footer>
+    <section class="contenedorfooter">
+      <div class="footerTitulo">
+       <p> Gracias por visitar Antología Diarios y Agendas</p>
+      </div>
+      </section>
+  </footer>
+
+  <script src="../javascript/formEmail.js"></script>
 
 </body>
 
-</html>
+</html>s

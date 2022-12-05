@@ -168,7 +168,7 @@ main {
   flex-direction: column;
 }
 .enconstruccion {
-  padding-top: 20px;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,6 +276,7 @@ textarea {
   color: var(--very-light-pink);
 }
 /*Modal Container - Lista del carro de compras*/
+
 .modal-container {
   width: 80%;
   margin: 0 10%;
@@ -390,6 +391,100 @@ textarea {
   box-shadow: 0 0 35px 0 #7effbe;
 }
 
+/*FORMULARIO EMAIL*/
+.formTitulo {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7e3b47;
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: bold;  
+}
+.titComunicate{
+  margin-bottom: 15px;
+}
+#formulario{
+  background-color: #fff;
+  border: solid;
+  border-color: #fec8d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  padding: 20 px;
+  margin-bottom: 30px;
+}
+.items {
+  position: relative;
+  margin: 45px;
+}
+
+.items .inputItem,
+.inputItemMess {
+  background: #ffe7eb;
+  color: #7e3b47;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--colorTextos);
+  resize: none;
+}
+
+.inputItem:focus,
+.inputItemMess:focus {
+  outline: none;
+}
+
+.inputItem:focus ~ .labelItem,
+.inputItem:valid ~ .labelItem {
+  position: absolute;
+  top: -14px;
+  font-size: 12px;
+  color: #7e3b47;
+}
+
+.inputItemMess:focus ~ .labelItem,
+.inputItemMess:valid ~ .labelItem {
+  position: absolute;
+  top: -14px;
+  font-size: 12px;
+  color: #7e3b47;
+}
+
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #ff7e95;
+  color: #35674e;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+/*footer*/
+footer {
+  background: #7effbe;
+  display: flex;
+  justify-content: center;
+}
+
+.footerTitulo{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7e3b47;
+  font-size: 22px;
+  font-weight: bold; 
+}
+
 @media (max-width: 750px) {
   header {
     height: 50%;
@@ -438,6 +533,7 @@ textarea {
     height: 140px;
   }
   .modal-container {
+    justify-content: center;
     width: inherit;
   }
   .modal-container > .modal-content {
@@ -458,7 +554,7 @@ textarea {
     height: 300px;
     width: 300px;
   }
-  .enconstruccion-top {
+  .enonstruccion-top {
     display: flex;
     justify-content: center;
     align-items: center;
