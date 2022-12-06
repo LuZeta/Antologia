@@ -136,12 +136,12 @@ h2 {
   text-decoration: none;
   align-items: center;
 }
-.cartContainer{
-  top: 1px;
-    right: 1px;
-    position: fixed;
-    text-align-last: end;
-
+.cartContainer {
+  top: 50px;
+  right: 1px;
+ 
+  position: fixed;
+  text-align-last: end;
 }
 .carro {
   margin-top: 10px;
@@ -411,12 +411,12 @@ textarea {
   color: #7e3b47;
   flex-direction: column;
   font-size: 22px;
-  font-weight: bold;  
+  font-weight: bold;
 }
-.titComunicate{
+.titComunicate {
   margin-bottom: 15px;
 }
-#formulario{
+#formulario {
   background-color: #fff;
   border: solid;
   border-color: #fec8d8;
@@ -485,7 +485,7 @@ footer {
   justify-content: center;
 }
 
-.footerTitulo{
+.footerTitulo {
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
@@ -493,7 +493,7 @@ footer {
   align-items: center;
   color: #7e3b47;
   font-size: 22px;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 @media (max-width: 750px) {
@@ -552,7 +552,6 @@ footer {
   .product-card img {
     width: 140px;
     height: 140px;
-    
   }
   .modal-container {
     justify-content: center;
@@ -574,6 +573,7 @@ footer {
   .imprimible {
     height: 300px;
     width: 300px;
+    margin-left: 20px;
   }
   .enonstruccion-top {
     display: flex;
